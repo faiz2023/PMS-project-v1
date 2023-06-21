@@ -2,6 +2,10 @@ import React from 'react'
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const vendor = React.lazy(() => import('./pages/vendor/Vendor'))
+const Product = React.lazy(() => import('./pages/products/Product'))
+const Costomes = React.lazy(() => import('./pages/Costomes/Costomes'))
+const Purchases = React.lazy(() => import('./pages/Purchases/Purchases'))
+const Supportenq = React.lazy(() => import('./pages/supportenq/Supportenq'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
@@ -55,6 +59,10 @@ const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/vendor', name: 'vendor', element: vendor },
+  { path: '/Product', name: 'vendor', element: Product },
+  { path: '/Costomes', name: 'vendor', element: Costomes },
+  { path: '/Purchases', name: 'vendor', element: Purchases },
+  { path: '/Supportenq', name: 'vendor', element: Supportenq },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },

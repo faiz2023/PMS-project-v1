@@ -37,21 +37,21 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Products',
-    to: '/coursemanage',
+    to: '/Product',
     icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
   },
 
   {
     component: CNavItem,
     name: 'Customers',
-    to: '/myteam',
+    to: '/Costomes',
     icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
   },
 
   {
     component: CNavItem,
     name: 'Purchases',
-    to: '/enquiry',
+    to: '/Purchases',
     icon: <CIcon icon={cilCommentSquare} customClassName="nav-icon" />,
   },
   {
