@@ -69,7 +69,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Pricing package',
-        to: '/settings/category',
+        to: '/settings/Pricingpackages/Pricingpackages',
         icon: <CIcon icon={cilLibrary} customClassName="nav-icon" />,
         // icon: <LayoutTextSidebarReverse className="me-3" customClassName="nav-icon" />,
       },

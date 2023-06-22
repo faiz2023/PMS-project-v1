@@ -6,6 +6,7 @@ const Product = React.lazy(() => import('./pages/products/Product'))
 const Costomes = React.lazy(() => import('./pages/Costomes/Costomes'))
 const Purchases = React.lazy(() => import('./pages/Purchases/Purchases'))
 const Supportenq = React.lazy(() => import('./pages/supportenq/Supportenq'))
+const Pricingpackages = React.lazy(() => import('./pages/settings/Pricingpackages/Pricingpackages'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
@@ -63,6 +64,7 @@ const routes = [
   { path: '/Costomes', name: 'vendor', element: Costomes },
   { path: '/Purchases', name: 'vendor', element: Purchases },
   { path: '/Supportenq', name: 'vendor', element: Supportenq },
+  { path: '/settings/Pricingpackages/Pricingpackages', name: 'vendor', element: Pricingpackages },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },
