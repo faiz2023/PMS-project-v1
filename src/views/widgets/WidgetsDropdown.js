@@ -22,10 +22,7 @@ const WidgetsDropdown = () => {
           color="primary"
           value={
             <>
-              Vendor{' '}
-              <span className="fs-6 fw-normal">
-                
-              </span>
+              Vendor <span className="fs-6 fw-normal"></span>
             </>
           }
           title="2"
@@ -109,10 +106,7 @@ const WidgetsDropdown = () => {
           color="info"
           value={
             <>
-            Products{' '}
-              <span className="fs-6 fw-normal">
-              
-              </span>
+              Products <span className="fs-6 fw-normal"></span>
             </>
           }
           title="100"
@@ -195,10 +189,7 @@ const WidgetsDropdown = () => {
           color="warning"
           value={
             <>
-            Costomers{' '}
-              <span className="fs-6 fw-normal">
-              
-              </span>
+              Costomers <span className="fs-6 fw-normal"></span>
             </>
           }
           title="450"
@@ -268,10 +259,7 @@ const WidgetsDropdown = () => {
           color="danger"
           value={
             <>
-            Purchases{' '}
-              <span className="fs-6 fw-normal">
-              
-              </span>
+              Purchases <span className="fs-6 fw-normal"></span>
             </>
           }
           title="1200"

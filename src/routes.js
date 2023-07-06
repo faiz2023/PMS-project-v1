@@ -3,7 +3,7 @@ import React from 'react'
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const vendor = React.lazy(() => import('./pages/vendor/Vendor'))
 const Product = React.lazy(() => import('./pages/products/Product'))
-const Costomes = React.lazy(() => import('./pages/Costomes/Costomes'))
+const Customers = React.lazy(() => import('./pages/Customers/Customers'))
 const Purchases = React.lazy(() => import('./pages/Purchases/Purchases'))
 const Supportenq = React.lazy(() => import('./pages/supportenq/Supportenq'))
 const Pricingpackages = React.lazy(() => import('./pages/settings/Pricingpackages/Pricingpackages'))
@@ -11,7 +11,7 @@ const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
 // Base
-const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
+// const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
 const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
 const Cards = React.lazy(() => import('./views/base/cards/Cards'))
 const Carousels = React.lazy(() => import('./views/base/carousels/Carousels'))
@@ -54,22 +54,24 @@ const Badges = React.lazy(() => import('./views/notifications/badges/Badges'))
 const Modals = React.lazy(() => import('./views/notifications/modals/Modals'))
 const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 
-
-
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/vendor', name: 'Vendor', element: vendor },
   { path: '/Product', name: 'Product', element: Product },
-  { path: '/Costomes', name: 'Costomes', element: Costomes },
+  { path: '/Customers', name: 'Customers', element: Customers },
   { path: '/Purchases', name: 'Purchases', element: Purchases },
   { path: '/Supportenq', name: 'Supportenq', element: Supportenq },
-  { path: '/settings/Pricingpackages/Pricingpackages', name: 'settings/Pricingpackages', element: Pricingpackages },
+  {
+    path: '/settings/Pricingpackages/Pricingpackages',
+    name: 'settings/Pricingpackages',
+    element: Pricingpackages,
+  },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },
   { path: '/base', name: 'Base', element: Cards, exact: true },
-  { path: '/base/accordion', name: 'Accordion', element: Accordion },
+  // { path: '/base/accordion', name: 'Accordion', element: Accordion },
   { path: '/base/breadcrumbs', name: 'Breadcrumbs', element: Breadcrumbs },
   { path: '/base/cards', name: 'Cards', element: Cards },
   { path: '/base/carousels', name: 'Carousel', element: Carousels },
@@ -106,7 +108,6 @@ const routes = [
   { path: '/notifications/badges', name: 'Badges', element: Badges },
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
- 
 ]
 
 export default routes

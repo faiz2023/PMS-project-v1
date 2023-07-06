@@ -14,7 +14,6 @@ import {
   cilHamburgerMenu,
   cilListRich,
   cilList,
-
 } from '@coreui/icons'
 import { CNavGroup, CNavItem } from '@coreui/react'
 
@@ -44,7 +43,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Customers',
-    to: '/Costomes',
+    to: '/Customers',
     icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
   },
 
@@ -95,7 +94,6 @@ const _nav = [
 
         // icon: <FileFontFill className="me-3" customClassName="nav-icon" />,
       },
-     
     ],
   },
   // {
@@ -103,24 +101,24 @@ const _nav = [
   //   name: 'Miscellaneous',
 
   //   to: '/miscellaneous',
-    // icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
-    // items: [
-    //   {
-    //     component: CNavItem,
-    //     name: 'Task',
-    //     to: '/miscellaneous/task',
-        // icon: <CIcon icon={cilLibrary} customClassName="nav-icon" />,
-        // icon: <LayoutTextSidebarReverse className="me-3" customClassName="nav-icon" />,
-      // },
-      // {
-      //   component: CNavItem,
-      //   name: 'Task Type',
-      //   to: '/miscellaneous/tasktype',
-        // icon: <CIcon icon={cilLibrary} customClassName="nav-icon" />,
-        // icon: <LayoutTextSidebarReverse className="me-3" customClassName="nav-icon" />,
-    //   },
+  // icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+  // items: [
+  //   {
+  //     component: CNavItem,
+  //     name: 'Task',
+  //     to: '/miscellaneous/task',
+  // icon: <CIcon icon={cilLibrary} customClassName="nav-icon" />,
+  // icon: <LayoutTextSidebarReverse className="me-3" customClassName="nav-icon" />,
+  // },
+  // {
+  //   component: CNavItem,
+  //   name: 'Task Type',
+  //   to: '/miscellaneous/tasktype',
+  // icon: <CIcon icon={cilLibrary} customClassName="nav-icon" />,
+  // icon: <LayoutTextSidebarReverse className="me-3" customClassName="nav-icon" />,
+  //   },
 
-    // ]
+  // ]
 
   // }
 ]

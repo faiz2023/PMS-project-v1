@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Container, Row, Col, Badge, Card, Form, Button } from 'react-bootstrap'
 import './ViewTable.css'
 import { CgUserList } from 'react-icons/cg'
-import { GoEye } from 'react-icons/go'
+import { GoEye, GoPlus } from 'react-icons/go'
 import { BsPencilSquare } from 'react-icons/bs'
 import { RiDeleteBin6Fill } from 'react-icons/ri'
 import AddModal from '../AddModal/AddModal'
@@ -126,6 +126,11 @@ const ViewTable = () => {
     {
       name: 'ADDRESS',
       selector: 'Address',
+      sortable: true,
+    },
+    {
+      name: 'ID PROOF',
+      selector: 'Id_Proof',
       sortable: true,
     },
     {
