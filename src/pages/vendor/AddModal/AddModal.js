@@ -7,6 +7,7 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 import './AddModal.css'
 
+
 const AddModal = () => {
   // .............Modal Controls..................//
 
@@ -19,6 +20,7 @@ const AddModal = () => {
   // ...........Validation...............//
 
   const initialValues = {
+<<<<<<< HEAD
     First_name: '',
     Last_name: '',
     Phone: '',
@@ -36,20 +38,51 @@ const AddModal = () => {
   const handleReset = (formik) => {
     formik.resetForm()
   }
+=======
+    First_name: "",
+    Last_name: "",
+    Phone: "",
+    alternative_no: "",
+    email: "",
+    Address: "",
+    Id_Proof: "",
+    Logo: "",
+    Company_Name: "",
+    Products: "",
+    Company_Lisence_Number: "",
+    Company_Lisence_Id: "",
+    Product_Category: "",
+  };
+  const handleReset = (formik) => {
+    formik.resetForm();
+  };
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
   const formik = useFormik({
     initialValues: initialValues,
     validationSchema: ValidSchema,
     onSubmit: async (values, { resetForm }) => {
       try {
+<<<<<<< HEAD
         create(values)
         resetForm()
         handleClose()
         location.reload()
+=======
+        create(values);
+        resetForm();
+        handleClose();
+        // eslint-disable-next-line no-restricted-globals
+        location.reload();
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
       } catch (error) {
         console.error(error)
       }
     },
+<<<<<<< HEAD
   })
+=======
+  });
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
   // ...........Validation Ends..........//
 
   // ...............Adding User Here.......................//
@@ -69,8 +102,13 @@ const AddModal = () => {
     Company_Lisence_Id,
     Product_Category,
   }) => {
+<<<<<<< HEAD
     if (First_name == '' && email == '') {
       console.log('enter all detailes')
+=======
+    if (First_name == "" && email == "") {
+      console.log("enter all detailes");
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
     } else {
       try {
         const user_lic = {
@@ -87,6 +125,7 @@ const AddModal = () => {
           Company_Lisence_Number: Company_Lisence_Number,
           Company_Lisence_Id: Company_Lisence_Id,
           Product_Category: Product_Category,
+<<<<<<< HEAD
         }
 
         console.log(formik.values)
@@ -107,6 +146,30 @@ const AddModal = () => {
     }
   }
 
+=======
+        };
+
+        console.log(formik.values);
+
+        const response = await axios.post(
+          `http://localhost:3003/vendors`,
+          user_lic
+        );
+
+        if (response.status === 200) {
+          toast.success("User Successfully Created !", {
+            toastId: "success",
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 1000,
+          });
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
   // ...............Adding User Ends Here.......................//
   return (
     <>
@@ -126,7 +189,14 @@ const AddModal = () => {
           <Row>
             <Col lg={12}>
               <Form onSubmit={formik.handleSubmit} action="">
+<<<<<<< HEAD
                 <Modal.Body style={{ height: '310px' }} className="overflow-auto">
+=======
+                <Modal.Body
+                  style={{ height: "310px" }}
+                  className="overflow-auto"
+                >
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
                   <Form.Label className="ms-1 ">First name</Form.Label>
                   <Form.Control
                     required
@@ -370,7 +440,9 @@ const AddModal = () => {
                     </p>
                   ) : null}
 
-                  <Form.Label className="ms-1 mt-1">Company Lisence Number</Form.Label>
+                  <Form.Label className="ms-1 mt-1">
+                    Company Lisence Number
+                  </Form.Label>
                   <Form.Control
                     required
                     type="text"
@@ -396,7 +468,9 @@ const AddModal = () => {
                     </p>
                   ) : null}
 
-                  <Form.Label className="ms-1 mt-1">Company Lisence Id</Form.Label>
+                  <Form.Label className="ms-1 mt-1">
+                    Company Lisence Id
+                  </Form.Label>
                   <Form.Control
                     required
                     type="text"
@@ -422,7 +496,9 @@ const AddModal = () => {
                     </p>
                   ) : null}
 
-                  <Form.Label className="ms-1 mt-1">Product Category</Form.Label>
+                  <Form.Label className="ms-1 mt-1">
+                    Product Category
+                  </Form.Label>
                   <Form.Control
                     required
                     type="text"
@@ -454,8 +530,13 @@ const AddModal = () => {
                     type="reset"
                     variant="danger"
                     onClick={() => {
+<<<<<<< HEAD
                       handleReset(formik)
                       handleClose()
+=======
+                      handleReset(formik);
+                      handleClose();
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
                     }}
                   >
                     Close
@@ -463,8 +544,15 @@ const AddModal = () => {
                   <Button
                     className="text-white"
                     onClick={() => {
+<<<<<<< HEAD
                       formik.isValid ? create(formik.values) : alert(formik.errors) 
                       console.log(formik.values)
+=======
+                      formik.isValid
+                        ? create(formik.values)
+                        : alert(formik.errors);
+                      console.log(formik.values);
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
                     }}
                     type="submit"
                     variant="success ms-2"

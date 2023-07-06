@@ -27,12 +27,21 @@ const ViewTable = () => {
   const [data, setData] = useState([])
   useEffect(() => {
     async function fetchData() {
+<<<<<<< HEAD
       const response = await fetch('http://localhost:8000/enquiry')
       const json = await response.json()
       setData(json)
       setSearchData(json)
       setFilterData(json)
       console.log('hp')
+=======
+      const response = await fetch("http://localhost:3003/SupportEnquiry");
+      const json = await response.json();
+      setData(json);
+      setSearchData(json);
+      setFilterData(json);
+      console.log("hp");
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
     }
     fetchData()
   }, [load])
@@ -134,6 +143,7 @@ const ViewTable = () => {
       sortable: true,
     },
 
+<<<<<<< HEAD
     {
       name: 'STATUS',
       selector: 'status',
@@ -163,6 +173,10 @@ const ViewTable = () => {
       ),
     },
   ]
+=======
+    
+  ];
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
 
   const paginationRowsPerPageOptions = [7, 14, 25]
   return (

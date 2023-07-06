@@ -16,13 +16,19 @@
   align-content: stretch;
   width: 100%;
   box-sizing: border-box;
+<<<<<<< HEAD
    font-size: 15px !important; 
   font-weight: 400 !important;
+=======
+  font-size: 15px !important;
+  font-weight: 700;
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
   color: rgba(0, 0, 0, 0.87);
   background-color: rgb(255, 255, 255);
   min-height: 48px;
 }
 
+<<<<<<< HEAD
 .search_inp{
   border-radius: 10px;
   border: 1px solid #0d9587;
@@ -39,11 +45,36 @@
   font-size: 15px !important;
 }
 .gUHoGv{
+=======
+.search_inp {
+  border-radius: 10px;
+  border: 1px solid #0d9587;
+}
+.search_inp:focus {
+  border: 1px solid #0d9587 !important;
+  box-shadow: none;
+}
+.fPIktX {
+  justify-content: center !important;
+  color: #40536e !important;
+}
+.eoCEVt {
+  font-size: 15px !important;
+}
+.gUHoGv {
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
   font-size: 17px;
   font-weight: 700;
   color: #40536e !important;
 }
+<<<<<<< HEAD
 .bNMBDS{
   /* height: 410px !important; */
   max-height: 410px !important;
 }
+=======
+.bNMBDS {
+  /* height: 410px !important; */
+  max-height: 410px !important;
+}
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e

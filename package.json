@@ -52,8 +52,11 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+<<<<<<< HEAD
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+=======
+>>>>>>> 1875405c3c21113d9da16e5b4a2e05b0ac94af4e
     "react-scripts": "5.0.1",
     "sass": "^1.58.3",
     "web-vitals": "^3.1.1"
