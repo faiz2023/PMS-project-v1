@@ -3,7 +3,7 @@ import React from 'react'
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const vendor = React.lazy(() => import('./pages/vendor/Vendor'))
 const Product = React.lazy(() => import('./pages/products/Product'))
-const Costomes = React.lazy(() => import('./pages/Costomes/Costomes'))
+const Customers = React.lazy(() => import('./pages/Customers/Customers'))
 const Purchases = React.lazy(() => import('./pages/Purchases/Purchases'))
 const Supportenq = React.lazy(() => import('./pages/supportenq/Supportenq'))
 const Pricingpackages = React.lazy(() => import('./pages/settings/Pricingpackages/Pricingpackages'))
@@ -61,7 +61,7 @@ const routes = [
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/vendor', name: 'Vendor', element: vendor },
   { path: '/Product', name: 'Product', element: Product },
-  { path: '/Costomes', name: 'Costomes', element: Costomes },
+  { path: '/Customers', name: 'Customers', element: Customers },
   { path: '/Purchases', name: 'Purchases', element: Purchases },
   { path: '/Supportenq', name: 'Supportenq', element: Supportenq },
   { path: '/settings/Pricingpackages/Pricingpackages', name: 'settings/Pricingpackages', element: Pricingpackages },
