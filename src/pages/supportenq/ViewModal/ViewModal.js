@@ -56,8 +56,6 @@ const ViewModal = ({ viewclose, view, id }) => {
           <Container>
             <Row>
               <Col lg={12}>
-               
-        
                 <Form.Label className="ms-1 mt-2">First name</Form.Label>
                 <Form.Control disabled type="text" value={user.fname} />
                 <Form.Label className="ms-1 mt-2">Last name</Form.Label>
@@ -91,7 +89,7 @@ const ViewModal = ({ viewclose, view, id }) => {
           </Container>
         </Modal.Body>
         <Modal.Footer>
-          <Button className='text-white' variant="danger" onClick={handleModalClose}>
+          <Button className="text-white" variant="danger" onClick={handleModalClose}>
             Close
           </Button>
         </Modal.Footer>

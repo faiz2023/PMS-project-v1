@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import DataTable from 'react-data-table-component'
-import 'react-toastify/dist/ReactToastify.css'
-import { Container, Row, Col, Badge, Card, Form, Button } from 'react-bootstrap'
-import './ViewTable.css'
-
+import React, { useState, useEffect } from "react";
+import DataTable from "react-data-table-component";
+import "react-toastify/dist/ReactToastify.css";
+import {
+  Container,
+  Row,
+  Col,
+  Badge,
+  Card,
+  Form,
+  Button,
+} from "react-bootstrap";
+import "./ViewTable.css";
+import { GoEye } from "react-icons/go";
 
 import ViewModal from '../ViewModal/ViewModal'
 
@@ -27,12 +35,12 @@ const ViewTable = () => {
   const [data, setData] = useState([])
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch('http://localhost:3003/Purchase')
-      const json = await response.json()
-      setData(json)
-      setSearchData(json)
-      setFilterData(json)
-      console.log('hp')
+      const response = await fetch("http://localhost:3003/Customers");
+      const json = await response.json();
+      setData(json);
+      setSearchData(json);
+      setFilterData(json);
+      console.log("hp");
     }
     fetchData()
   }, [load])
@@ -46,10 +54,10 @@ const ViewTable = () => {
   const Search = (event) => {
     const query = event.target.value
     const searched = searchData.filter((item) =>
-      item.f_name.toLowerCase().includes(query.toLowerCase()),
-    )
-    setData(searched)
-  }
+      item.fname.toLowerCase().includes(query.toLowerCase())
+    );
+    setData(searched);
+  };
   useEffect(() => {
     setSearchData(data)
   }, [searchData])
@@ -113,31 +121,31 @@ const ViewTable = () => {
       sortable: true,
     },
     {
-      name: 'DATE',
-      selector: 'date',
+      name: "EMAIL",
+      selector: "email",
       sortable: true,
     },
     {
-      name: 'BUY PRODUCT',
-      selector: 'buy_product',
+      name: "PHONE",
+      selector: "mobile",
       sortable: true,
     },
     {
-      name: 'PRODUCT PRICE',
-      selector: 'product_price',
+      name: "ENQ FOR",
+      selector: "enq_for",
       sortable: true,
     },
     ,
     {
-      name: 'VENDOR NAME',
-      selector: 'vendor_name',
+      name: "LOCATION",
+      selector: "loc",
       sortable: true,
     },
 
-    
-  ]
+   
+  ];
 
-  const paginationRowsPerPageOptions = [7, 14, 25]
+  const paginationRowsPerPageOptions = [7, 14, 25];
   return (
     <>
       <Container fluid>
@@ -193,7 +201,7 @@ const ViewTable = () => {
                   paginationRowsPerPageOptions={paginationRowsPerPageOptions}
                   pagination
                   paginationPerPage={7}
-                  fixedHeader
+                  fixedHeader                 
                   selectableRows
                   selectableRowsHighlight
                   fixedHeaderScrollHeight="400px"
@@ -216,7 +224,7 @@ const ViewTable = () => {
         position="top-right"
         autoClose={1000}
         hideProgressBar={false}
-        newestOnTop={false}
+        newestOnTo-8p={false}
         closeOnClick
         rtl={false}
         pauseOnFocusLoss

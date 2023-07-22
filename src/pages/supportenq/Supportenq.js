@@ -4,7 +4,7 @@ import ViewTable from '../supportenq/ViewTable/ViewTable'
 function Supportenq() {
   return (
     <div>
-      <ViewTable/>
+      <ViewTable />
     </div>
   )
 }

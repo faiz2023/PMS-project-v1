@@ -7,7 +7,7 @@ import CIcon from '@coreui/icons-react'
 import { AppSidebarNav } from './AppSidebarNav'
 
 import { logoNegative } from 'src/assets/brand/logo-negative'
-import  pmslogo from 'src/assets/images/download-removebg-preview.png'
+import pmslogo from 'src/assets/images/PMS.png'
 
 import { sygnet } from 'src/assets/brand/sygnet'
 
@@ -32,8 +32,7 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarBrand className="d-none d-md-flex" to="/">
-      <img src={pmslogo} className="sidebar-brand-full" 
-      height={60} />
+        <img src={pmslogo} className="sidebar-brand-full" height={60} />
         <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} />
       </CSidebarBrand>
       <CSidebarNav>

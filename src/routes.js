@@ -54,8 +54,6 @@ const Badges = React.lazy(() => import('./views/notifications/badges/Badges'))
 const Modals = React.lazy(() => import('./views/notifications/modals/Modals'))
 const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 
-
-
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -64,7 +62,11 @@ const routes = [
   { path: '/Customers', name: 'Customers', element: Customers },
   { path: '/Purchases', name: 'Purchases', element: Purchases },
   { path: '/Supportenq', name: 'Supportenq', element: Supportenq },
-  { path: '/settings/Pricingpackages/Pricingpackages', name: 'settings/Pricingpackages', element: Pricingpackages },
+  {
+    path: '/settings/Pricingpackages/Pricingpackages',
+    name: 'settings/Pricingpackages',
+    element: Pricingpackages,
+  },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },
@@ -106,7 +108,6 @@ const routes = [
   { path: '/notifications/badges', name: 'Badges', element: Badges },
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
- 
 ]
 
 export default routes

@@ -1,107 +1,99 @@
-import React, { useState, useEffect } from "react";
-import DataTable from "react-data-table-component";
-import "react-toastify/dist/ReactToastify.css";
-import {
-  Container,
-  Row,
-  Col,
-  Badge,
-  Card,
-  Form,
-  Button,
-} from "react-bootstrap";
-import "./ViewTable.css";
-import { GoEye } from "react-icons/go";
+import React, { useState, useEffect } from 'react'
+import DataTable from 'react-data-table-component'
+import 'react-toastify/dist/ReactToastify.css'
+import { Container, Row, Col, Badge, Card, Form, Button } from 'react-bootstrap'
+import './ViewTable.css'
+import { GoEye } from 'react-icons/go'
 
-import ViewModal from "../ViewModal/ViewModal";
+import ViewModal from '../ViewModal/ViewModal'
 
-import { ToastContainer } from "react-toastify";
+import { ToastContainer } from 'react-toastify'
 
 const ViewTable = () => {
   //................Table Render Controll.............//
 
-  const [load, setLoad] = useState(false);
+  const [load, setLoad] = useState(false)
   const tableRenderTrue = () => {
-    setLoad(true);
-  };
+    setLoad(true)
+  }
   const tableRenderFalse = () => {
-    setLoad(false);
-  };
+    setLoad(false)
+  }
 
   //................Table Render Controll Ends.............//
 
   // ................Fetching All Data.....................//
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([])
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("http://localhost:3003/SupportEnquiry");
-      const json = await response.json();
-      setData(json);
-      setSearchData(json);
-      setFilterData(json);
-      console.log("hp");
+ 
+      const response = await fetch('http://localhost:3003/SupportEnquiry')
+      const json = await response.json()
+      setData(json)
+      setSearchData(json)
+      setFilterData(json)
+      console.log('hp')
+ 
     }
-    fetchData();
-  }, [load]);
+    fetchData()
+  }, [load])
 
   // ................Fetching All Data Enda.....................//
 
   //  .................Search Data........................//
 
-  const [searchData, setSearchData] = useState([]);
+  const [searchData, setSearchData] = useState([])
 
   const Search = (event) => {
-    const query = event.target.value;
+    const query = event.target.value
     const searched = searchData.filter((item) =>
-      item.fname.toLowerCase().includes(query.toLowerCase())
-    );
-    setData(searched);
-  };
+      item.fname.toLowerCase().includes(query.toLowerCase()),
+    )
+    setData(searched)
+  }
   useEffect(() => {
-    setSearchData(data);
-  }, [searchData]);
+    setSearchData(data)
+  }, [searchData])
 
   //  .................Search Data Ends.....................//
 
   //  .................Filter Data........................//
 
-  const [filterData, setFilterData] = useState([]);
+  const [filterData, setFilterData] = useState([])
 
   const filter = (event) => {
-    const filterquery = event.target.value;
+    const filterquery = event.target.value
     const filtered = filterData.filter(
-      (item) =>
-        item.status.toUpperCase() === filterquery.toUpperCase() ||
-        filterquery === ""
-    );
-    setData(filtered);
-  };
+      (item) => item.status.toUpperCase() === filterquery.toUpperCase() || filterquery === '',
+    )
+    setData(filtered)
+  }
   useEffect(() => {
-    setFilterData(data);
-  }, [filterData]);
+    setFilterData(data)
+  }, [filterData])
 
   //  .................Filter Data Ends.....................//
 
   // ...........View Modal ......................//
 
-  const [viewModal, setViewModal] = useState(false);
+  const [viewModal, setViewModal] = useState(false)
   const viewModalClose = () => {
-    setViewModal(false);
-  };
+    setViewModal(false)
+  }
   const viewModalShow = () => {
-    setViewModal(true);
-  };
+    setViewModal(true)
+  }
 
   // ...........View Modal Ends ......................//
 
   // ...........Row Id.................//
-  const [id, setId] = useState(null);
+  const [id, setId] = useState(null)
   const handleClick = (id) => {
-    console.log(`You clicked me! ${id}`);
-    setId(id);
-    console.log(id);
-  };
+    console.log(`You clicked me! ${id}`)
+    setId(id)
+    console.log(id)
+  }
 
   // ...........Row Id Ends..................//
 
@@ -109,12 +101,12 @@ const ViewTable = () => {
 
   const columns = [
     {
-      name: "ID",
-      selector: "_id",
+      name: 'ID',
+      selector: '_id',
       sortable: true,
     },
     {
-      name: "NAME",
+      name: 'NAME',
       cell: (row) => (
         <div>
           {row.fname} {row.lname}
@@ -123,31 +115,32 @@ const ViewTable = () => {
       sortable: true,
     },
     {
-      name: "EMAIL",
-      selector: "email",
+      name: 'EMAIL',
+      selector: 'email',
       sortable: true,
     },
     {
-      name: "PHONE",
-      selector: "mobile",
+      name: 'PHONE',
+      selector: 'mobile',
       sortable: true,
     },
     {
-      name: "ENQ FOR",
-      selector: "enq_for",
+      name: 'ENQ FOR',
+      selector: 'enq_for',
       sortable: true,
     },
     ,
     {
-      name: "LOCATION",
-      selector: "loc",
+      name: 'LOCATION',
+      selector: 'loc',
       sortable: true,
     },
 
-    
-  ];
+   
+  ]
+ 
 
-  const paginationRowsPerPageOptions = [7, 14, 25];
+  const paginationRowsPerPageOptions = [7, 14, 25]
   return (
     <>
       <Container fluid>
@@ -155,43 +148,27 @@ const ViewTable = () => {
           <Col className="p-1" lg={12}>
             <Card>
               <Card.Body className="pt-4">
-                <div style={{ width: "100%" }} className="d-flex ">
+                <div style={{ width: '100%' }} className="d-flex ">
                   <input
                     className="ms-auto me-3 mb-2 ps-2 search_inp"
                     type="text"
                     onChange={Search}
                     placeholder="Search"
                   />
-                  <div className="me-3 mb-2" style={{ width: "120px" }}>
-                    <Form.Select
-                      className="ms-auto search_inp "
-                      aria-label="Default select example"
-                      onChange={filter}
-                      name=""
-                    >
-                      <option
-                        style={{ backgroundColor: "#40536e" }}
-                        value=""
-                        className=" text-white"
-                      >
-                        Filter
-                      </option>
-                      <option>New</option>
-                      <option>Active</option>
-                      <option>Inactive</option>
-                    </Form.Select>
+                  <div className="me-3 mb-2" style={{ width: '120px' }}>
+                   
                   </div>
                   <div
                     className="search_inp "
                     style={{
-                      width: "95px",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "1rem",
-                      fontWeight: "400",
-                      marginRight: "18px",
-                      height: "37px",
+                      width: '95px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '1rem',
+                      fontWeight: '400',
+                      marginRight: '18px',
+                      height: '37px',
                     }}
                   >
                     Count : &nbsp;{data.length}
@@ -235,7 +212,7 @@ const ViewTable = () => {
         theme="light"
       />
     </>
-  );
-};
+  )
+}
 
-export default ViewTable;
+export default ViewTable

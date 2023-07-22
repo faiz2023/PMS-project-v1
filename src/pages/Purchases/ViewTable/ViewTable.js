@@ -46,7 +46,10 @@ const ViewTable = () => {
   const Search = (event) => {
     const query = event.target.value
     const searched = searchData.filter((item) =>
+
       item.f_name.toLowerCase().includes(query.toLowerCase()),
+
+
     )
     setData(searched)
   }

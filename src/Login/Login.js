@@ -6,7 +6,7 @@ import { Link,useNavigate } from 'react-router-dom'
 import { Container, Col, Row, InputGroup, Form, Button } from 'react-bootstrap'
 
 function Login() {
-    const [email, setEmail] = useState()
+    const [Email, setEmail] = useState()
     //console.log(email)
     const [password, setPassword] = useState()
     const [error, setError] = useState()
@@ -16,13 +16,13 @@ function Login() {
     async function loginUser(e){
       e.preventDefault()
   
-       const response = await fetch('http://localhost:8000/login',{
+       const response = await fetch('http://localhost:3003/Login',{
         method:'POST',
           headers:{
             'Content-Type':'application/json',
           },
           body: JSON.stringify({
-            email,
+            Email,
             password,
           }),
        
@@ -63,7 +63,7 @@ function Login() {
                     <span className="input-group-text bg-light">
                       <BsPersonFill style={{ color: '#213b50' }} />
                     </span>
-                    <Form.Control type="text" value={email} placeholder="email"  onChange={(e)=>setEmail(e.target.value)} />
+                    <Form.Control type="text" value={Email} placeholder="Email"  onChange={(e)=>setEmail(e.target.value)} />
                   </InputGroup>
 
                   <InputGroup className="mt-3" style={{ width: '100%', height: '45px' }}>
@@ -77,7 +77,7 @@ function Login() {
                   <p>{error == "" ? '' : error}</p>
                 
                   <div className="my-2">
-                    <a href="" className="text-white">
+                    <a href="" style={{textDecoration:'none'}}>
                       Forgot password?
                     </a>
                   </div>
